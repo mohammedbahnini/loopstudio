@@ -1,0 +1,120 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 15px;
+}
+body {
+    font-family: 'Alata', sans-serif;
+    min-height : 100vh ;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color : $white;
+}
+
+// container rules 
+.container{
+    max-width: 1114px;
+    margin: 0 auto;
+    @include mobile(){
+        max-width : 90%;
+    }
+}
+
+// listing
+ul{
+    list-style : none;
+}
+
+// flex
+.d-flex{
+    display: flex;
+    &.jc-center{
+        justify-content: center;
+    }
+    &.jc-sb{
+        justify-content: space-between;
+    }
+    &.ai-c{
+        align-items: center;
+    }
+    &.ai-stretch{
+        align-items : stretch;
+    }
+    &.ai-end{
+        align-items: flex-end;
+    }
+    &.dr-col{
+        flex-direction: column;
+    }
+}
+
+// floating
+.f-left{
+    float: left;
+}
+.f-right {
+    float : right;
+}
+.clear{
+    clear :both ;
+}
+
+// typography
+.uppercase{
+    text-transform : uppercase;
+}
+.f-normal{
+    font-weight: normal;
+}
+.f-lighter{
+    font-weight : lighter;
+}
+.f-bold{
+    font-weight : bold;
+}
+.fm-second{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+// btn
+.btn{
+    border : none;
+    outline : none;
+    color : $white ; 
+    background-color: $black;
+    padding: .75em 2em;
+    cursor: pointer;
+    font-size: .8rem;
+    transition: .2s;
+    &#{&}-outline{
+        background-color: $white;
+        color : $black;
+        border : 2px solid $black;
+        &:hover{
+            color: $white;
+            background-color: $black;
+        }
+    }
+}
+
+// display for mobile
+.for-mobile{
+    display: none;
+    @include mobile(){
+        display: initial;
+    }
+}
+.hide-on-mobile{
+    @include mobile(){
+        display: none;
+    }
+}
