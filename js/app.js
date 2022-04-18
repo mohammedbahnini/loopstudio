@@ -13,6 +13,6 @@ nav_menu.addEventListener('click' , ()=>{
         nav_menu.classList.add('open');
         menu.classList.add('open');
         body.style.overflow = 'hidden';
-        body.style.height = '100vh';
+        body.style.height = '100%';
     }
 });
