@@ -225,12 +225,14 @@ main {
             overflow: hidden;
             cursor : pointer;
             @include mobile(){
-                max-height : 150px;
+                min-height : 150px;
             }
             img{
                 width: 100%;
+                height: 100%;
+                object-fit: cover;
                 @include mobile(){
-                    width: auto ;
+                    width: 100% ;
                     height: 100%;
                 }
             }
